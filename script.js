@@ -95,3 +95,23 @@ window.onclick = function(event) {
         gap: 0;
     }
 }
+// Auto-GPS Location Fetcher
+function getLocation() {
+    const locInput = document.getElementById('locationInput');
+    if (navigator.geolocation) {
+        locInput.value = "Fetching GPS coordinates...";
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude.toFixed(4);
+                const lng = position.coords.longitude.toFixed(4);
+                locInput.value = `GPS: Lat ${lat}, Long ${lng} (Auto Detected)`;
+            },
+            () => {
+                locInput.value = "";
+                alert("Location permission denied. Please type your location manually.");
+            }
+        );
+    } else {
+        alert("Geolocation is not supported by your browser.");
+    }
+}
