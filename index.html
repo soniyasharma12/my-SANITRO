@@ -12,12 +12,12 @@
     <!-- NAVBAR HEADER -->
     <header class="navbar-header">
         <nav class="navbar">
-            <a href="#" class="nav-logo">
+            <a href="#home" class="nav-logo">
                 SANI<span class="logo-highlight">TRO</span>
             </a>
 
             <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
                 <li class="nav-item"><a href="#track" class="nav-link">Track Status</a></li>
@@ -33,7 +33,7 @@
                     🚨 Report Issue
                 </button>
 
-                <button class="hamburger" id="hamburgerBtn">
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -43,7 +43,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <main class="hero-container" id="home">
+    <section class="hero-container" id="home">
         <div class="hero-card">
             <h1 class="hero-title">SANITRO</h1>
             <h2 class="hero-subtitle">Smart Sanitation. Instant Relief.</h2>
@@ -55,14 +55,40 @@
                 REPORT OVERFLOW
             </button>
         </div>
-    </main>
+    </section>
 
-    <!-- REPORT MODAL (POPUP FORM) -->
+    <!-- TRACK STATUS SECTION -->
+    <section class="section-container" id="track">
+        <div class="section-card">
+            <h2 class="section-title">Track Complaint Status</h2>
+            <p class="section-subtitle">Enter your Ticket ID below to check live status.</p>
+            
+            <div class="track-box">
+                <input type="text" id="ticketInput" placeholder="e.g., SAN-9821" class="track-input">
+                <button class="track-btn" onclick="trackComplaint()">Track</button>
+            </div>
+
+            <!-- Live Status Output Card -->
+            <div id="statusResult" class="status-card" style="display: none;">
+                <div class="status-header">
+                    <span>Ticket ID: <strong id="resTicket">SAN-9821</strong></span>
+                    <span class="status-badge" id="resBadge">In Progress</span>
+                </div>
+                <div class="status-details">
+                    <p><strong>Location:</strong> Sector 15, Near Community Center</p>
+                    <p><strong>Assigned Worker:</strong> Rajesh Kumar (Verified)</p>
+                    <p><strong>Estimated Arrival:</strong> 20 Mins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REPORT MODAL POPUP -->
     <div class="modal-overlay" id="reportModal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeReportModal()">&times;</span>
-            <h2>Report Sewage Emergency / सीवरेज आपातकालीन शिकायत</h2>
-            <form class="report-form" onsubmit="event.preventDefault(); alert('Complaint Submitted Successfully!'); closeReportModal();">
+            <h2>Report Sewage Emergency / आपातकालीन शिकायत</h2>
+            <form class="report-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
                     <label>Your Name / आपका नाम</label>
                     <input type="text" placeholder="Enter your full name" required>
@@ -76,8 +102,8 @@
                     <input type="text" placeholder="Enter address or landmark" required>
                 </div>
                 <div class="form-group">
-                    <label>Issue Description / समस्या का विवरण</label>
-                    <textarea rows="3" placeholder="Describe the sewage issue..." required></textarea>
+                    <label>Issue Description / विवरण</label>
+                    <textarea rows="3" placeholder="Describe the issue..." required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Submit Emergency Request</button>
             </form>
