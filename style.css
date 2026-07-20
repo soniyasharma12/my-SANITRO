@@ -372,3 +372,99 @@ body {
 .submit-btn:hover {
     background-color: #157347;
 }
+/* --- FIXED NAVBAR CSS --- */
+.navbar-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Prevent padding overflow */
+}
+
+/* Logo Fix */
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-decoration: none;
+    white-space: nowrap; /* Logo tutne se rokega */
+    margin-right: 1.5rem;
+}
+
+.logo-highlight {
+    color: #2563eb;
+}
+
+/* Nav Menu Fix (Flexible Spacing) */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem; /* Links ke beech proper gap */
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Horizontal alignment maintain rakhega */
+}
+
+.nav-item {
+    white-space: nowrap; /* Text ko do lines me tootne se rokega */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #2563eb;
+}
+
+/* Actions Right Side Fix */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto; /* Buttons ko bilkul right push karega */
+}
+
+.lang-select {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    height: 36px;
+}
+
+.nav-btn-emergency {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
