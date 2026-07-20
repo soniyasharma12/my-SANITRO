@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANITRO - Smart Sanitation. Instant Relief.</title>
+    <title>SANITRO - Smart Urban Sanitation Platform</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -13,28 +13,28 @@
     <header class="navbar-header">
         <nav class="navbar">
             <a href="#home" class="nav-logo">
-                SANI<span class="logo-highlight">TRO</span>
+                SANI<span class="logo-highlight">TRO</span> <span class="startup-tag">B2G SaaS</span>
             </a>
 
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
                 <li class="nav-item"><a href="#track" class="nav-link">Track Status</a></li>
                 <li class="nav-item"><a href="#worker-join" class="nav-link">Join as Worker</a></li>
+                <li class="nav-item"><a href="#admin-demo" class="nav-link admin-link">Govt Portal Demo</a></li>
             </ul>
 
             <div class="nav-actions">
                 <select class="lang-select" id="langSelect">
                     <option value="en">English</option>
-                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="hi">हिंदी</option>
                 </select>
 
                 <button class="nav-btn-emergency" onclick="openReportModal()">
-                    🚨 Report Issue
+                    🚨 Report Emergency
                 </button>
 
-                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+                <button class="hamburger" id="hamburgerBtn">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -46,87 +46,165 @@
     <!-- HERO SECTION -->
     <section class="hero-container" id="home">
         <div class="hero-card">
+            <span class="badge-pill">Urban Cleantech & Disaster Relief Platform</span>
             <h1 class="hero-title">SANITRO</h1>
             <h2 class="hero-subtitle">Smart Sanitation. Instant Relief.</h2>
             <p class="hero-description">
-                Connecting local residents with verified sanitation workers during monsoon emergencies. 
-                Report sewage overflows instantly and get hyper-local help without any delay.
+                Hyper-local emergency sewage & flood-relief dispatch system. Connecting urban citizens with verified sanitation workers and giving municipal bodies real-time analytics.
             </p>
-            <button class="cta-button" onclick="openReportModal()">
-                REPORT OVERFLOW
-            </button>
+            <div class="hero-btn-group">
+                <button class="cta-button" onclick="openReportModal()">REPORT SEWAGE EMERGENCY</button>
+                <a href="#admin-demo" class="secondary-btn">View Municipal Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT METRICS BAR (Startup Pitch Highlight) -->
+    <section class="metrics-bar">
+        <div class="metrics-container">
+            <div class="metric-item">
+                <h3><span id="counter1">500</span>+</h3>
+                <p>Emergency Issues Resolved</p>
+            </div>
+            <div class="metric-item">
+                <h3>< 18 Mins</h3>
+                <p>Avg Dispatch SLA Time</p>
+            </div>
+            <div class="metric-item">
+                <h3>120+</h3>
+                <p>Verified Gig-Workers</p>
+            </div>
+            <div class="metric-item">
+                <h3>98%</h3>
+                <p>Citizen Satisfaction Rate</p>
+            </div>
         </div>
     </section>
 
     <!-- TRACK STATUS SECTION -->
     <section class="section-container" id="track">
         <div class="section-card">
-            <h2 class="section-title">Track Complaint Status</h2>
-            <p class="section-subtitle">Enter your Ticket ID below to check live status.</p>
+            <h2 class="section-title">Track Live Emergency Request</h2>
+            <p class="section-subtitle">Enter your Ticket ID below for real-time dispatch status.</p>
             
             <div class="track-box">
                 <input type="text" id="ticketInput" placeholder="e.g., SAN-9821" class="track-input">
-                <button class="track-btn" onclick="trackComplaint()">Track</button>
+                <button class="track-btn" onclick="trackComplaint()">Track Status</button>
             </div>
 
-            <!-- Live Status Output Card -->
             <div id="statusResult" class="status-card" style="display: none;">
                 <div class="status-header">
                     <span>Ticket ID: <strong id="resTicket">SAN-9821</strong></span>
-                    <span class="status-badge" id="resBadge">In Progress</span>
+                    <span class="status-badge">Worker En-Route 🚜</span>
                 </div>
                 <div class="status-details">
-                    <p><strong>Location:</strong> Sector 15, Near Community Center</p>
-                    <p><strong>Assigned Worker:</strong> Rajesh Kumar (Verified)</p>
-                    <p><strong>Estimated Arrival:</strong> 20 Mins</p>
+                    <p><strong>Locality:</strong> Sector 15 / Hotspot Area</p>
+                    <p><strong>Assigned Partner:</strong> Ramesh Kumar (Verified Safety Kit)</p>
+                    <p><strong>Estimated Arrival:</strong> ~12 Minutes</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- WORKER REGISTRATION SECTION -->
-<section class="section-container" id="worker-join">
-    <div class="section-card worker-card">
-        <div class="worker-header">
-            <h2 class="section-title">Join as Verified Worker / कार्यकर्ता बनें</h2>
-            <p class="section-subtitle">Earn extra income & help your community during emergencies. (अपनी सेवाएं दें और आय बढ़ाएं)</p>
+
+    <!-- WORKER ONBOARDING SECTION -->
+    <section class="section-container" id="worker-join">
+        <div class="section-card worker-card">
+            <h2 class="section-title">Partner Worker Onboarding / कार्यकर्ता पंजीकरण</h2>
+            <p class="section-subtitle">Empowering informal sanitation workers with dignified gig income & safety gear.</p>
+
+            <form class="worker-form" onsubmit="handleWorkerRegistration(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name / पूरा नाम</label>
+                        <input type="text" placeholder="Ramesh Kumar" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile / फोन नंबर</label>
+                        <input type="tel" placeholder="10-digit number" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Specialization / कार्य क्षेत्र</label>
+                        <select required>
+                            <option value="">Select Service Specialty</option>
+                            <option value="sewer">Sewer & Drainage Relief</option>
+                            <option value="septic">Septic Tank Maintenance</option>
+                            <option value="plumbing">Emergency Pipe/Plumbing Repair</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Pincode / Servicing Area</label>
+                        <input type="text" placeholder="e.g. 121007" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="worker-submit-btn">👷 Join SANITRO Partner Network</button>
+            </form>
         </div>
+    </section>
 
-        <form class="worker-form" onsubmit="handleWorkerRegistration(event)">
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Full Name / पूरा नाम</label>
-                    <input type="text" placeholder="e.g. Ramesh Kumar" required>
-                </div>
-                <div class="form-group">
-                    <label>Mobile Number / मोबाइल नंबर</label>
-                    <input type="tel" placeholder="10-digit number" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Service Type / कार्य का प्रकार</label>
-                    <select required>
-                        <option value="">Select Specialization</option>
-                        <option value="drainage">Drainage & Sewage Cleaning</option>
-                        <option value="septic">Septic Tank Maintenance</option>
-                        <option value="plumbing">Emergency Pipe Repair / Plumbing</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Service Area / कार्य क्षेत्र (Pincode/Locality)</label>
-                    <input type="text" placeholder="e.g. Sector 15 / 121007" required>
+    <!-- MUNICIPAL GOVT DASHBOARD DEMO SECTION (Eureka Pitch Highlight) -->
+    <section class="section-container" id="admin-demo">
+        <div class="section-card admin-card">
+            <div class="admin-header">
+                <div>
+                    <span class="badge-pill green">B2G SaaS Live Demo</span>
+                    <h2 class="section-title">Municipal Authority Dashboard</h2>
+                    <p class="section-subtitle">Real-time control room view for Smart City Officers & Municipal Corporations.</p>
                 </div>
             </div>
 
-            <button type="submit" class="worker-submit-btn">
-                👷 Register as Partner Worker
-            </button>
-        </form>
-    </div>
-</section>
+            <div class="dashboard-stats-grid">
+                <div class="dash-stat">
+                    <span>Active Emergencies</span>
+                    <h4 class="text-red">14 Pending</h4>
+                </div>
+                <div class="dash-stat">
+                    <span>Workers Deployed</span>
+                    <h4 class="text-blue">32 Active</h4>
+                </div>
+                <div class="dash-stat">
+                    <span>Monsoon Hotspots</span>
+                    <h4 class="text-orange">3 High Alert</h4>
+                </div>
+            </div>
 
-    <!-- REPORT MODAL POPUP -->
+            <div class="dashboard-table-box">
+                <h3>Live Dispatch Queue</h3>
+                <table class="dash-table">
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Location / Sector</th>
+                            <th>Severity</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#SAN-8801</td>
+                            <td>Sector 15, Block C</td>
+                            <td><span class="sev-tag high">High Overflow</span></td>
+                            <td>Pending Assignment</td>
+                            <td><button class="dispatch-btn" onclick="alert('Worker Dispatched!')">Auto-Dispatch</button></td>
+                        </tr>
+                        <tr>
+                            <td>#SAN-8802</td>
+                            <td>Main Drain, Ward 4</td>
+                            <td><span class="sev-tag med">Medium Blockage</span></td>
+                            <td>Worker En-route</td>
+                            <td><button class="view-btn">View Map</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- REPORT EMERGENCY MODAL POPUP -->
     <div class="modal-overlay" id="reportModal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeReportModal()">&times;</span>
@@ -134,31 +212,43 @@
             <form class="report-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
                     <label>Your Name / आपका नाम</label>
-                    <input type="text" placeholder="Enter your full name" required>
+                    <input type="text" placeholder="Full Name" required>
                 </div>
                 <div class="form-group">
                     <label>Phone Number / फोन नंबर</label>
-                    <input type="tel" placeholder="Enter mobile number" required>
+                    <input type="tel" placeholder="Mobile Number" required>
                 </div>
                 <div class="form-group">
                     <label>Location / स्थान</label>
-                    <input type="text" placeholder="Enter address or landmark" required>
+                    <div class="geo-input-group">
+                        <input type="text" id="locationInput" placeholder="Enter landmark or auto-detect" required>
+                        <button type="button" class="geo-btn" onclick="getLocation()">📍 Auto GPS</button>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label>Issue Description / विवरण</label>
-                    <textarea rows="3" placeholder="Describe the issue..." required></textarea>
+                    <label>Upload Photo Proof / फोटो अपलोड (Optional)</label>
+                    <input type="file" accept="image/*" class="file-input">
                 </div>
-                <button type="submit" class="submit-btn">Submit Emergency Request</button>
+                <div class="form-group">
+                    <label>Issue Severity / समस्या का स्तर</label>
+                    <select required>
+                        <option value="low">Low - Minor Blockage</option>
+                        <option value="medium">Medium - Drain Overflowing</option>
+                        <option value="high">Critical - High Sewage Emergency</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">🚨 Submit Emergency Dispatch Request</button>
             </form>
         </div>
     </div>
 
+    <!-- FLOATING MOBILE BAR -->
+    <div class="mobile-bottom-bar">
+        <button class="mobile-emergency-btn" onclick="openReportModal()">
+            🚨 Report Sewage Emergency
+        </button>
+    </div>
+
     <script src="script.js"></script>
-    <!-- FLOATING MOBILE EMERGENCY BAR -->
-<div class="mobile-bottom-bar">
-    <button class="mobile-emergency-btn" onclick="openReportModal()">
-        🚨 Report Sewage Emergency
-    </button>
-</div>
 </body>
 </html>
