@@ -388,3 +388,108 @@ body {
     .form-row { flex-direction: column; gap: 0; }
     .track-box { flex-direction: column; }
 }
+/* ==========================================
+   MOBILE-FIRST & THUMB-FRIENDLY UX OVERRIDES
+   ========================================== */
+
+/* 1. Mobile Floating Emergency Bar */
+.mobile-bottom-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1500;
+}
+
+.mobile-emergency-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* 2. Responsive Mobile Styles */
+@media (max-width: 768px) {
+    /* Enable Bottom Floating Bar */
+    .mobile-bottom-bar {
+        display: block;
+    }
+
+    /* Extra padding at bottom so floating bar doesn't cover content */
+    body {
+        padding-bottom: 70px;
+    }
+
+    /* Hide redundant navbar button on small screens */
+    .nav-actions .nav-btn-emergency {
+        display: none;
+    }
+
+    /* Touch-friendly larger targets for inputs & buttons */
+    input, select, textarea, button {
+        font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+        min-height: 48px; /* Standard finger touch target size */
+    }
+
+    /* Mobile Container Adjustments */
+    .hero-container {
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+
+    .hero-card, .section-card {
+        padding: 1.8rem 1.2rem;
+        border-radius: 16px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+
+    /* Modal Sheet Styling for Mobile */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem 1.2rem;
+        border-radius: 16px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    /* Mobile Menu Drawer */
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #0f172a;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        gap: 1.5rem;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+}
