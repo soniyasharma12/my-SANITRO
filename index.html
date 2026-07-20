@@ -7,6 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <header class="navbar-header">
+    <nav class="navbar">
+        <!-- Logo Section -->
+        <a href="#" class="nav-logo">
+            <span class="logo-text">SANI<span class="logo-highlight">TRO</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+            <li class="nav-item"><a href="#track" class="nav-link">Track Status</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Side Controls (Language + Emergency Button) -->
+        <div class="nav-actions">
+            <!-- Language Switcher -->
+            <select class="lang-select" id="langSelect">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+            </select>
+
+            <!-- Quick Action Button -->
+            <button class="nav-btn-emergency" onclick="openReportModal()">
+                🚨 Report Issue
+            </button>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+</header>
+    
 
     <div class="container">
         <!-- Language Selector Dropdown -->
