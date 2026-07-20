@@ -78,6 +78,37 @@
       actionBtn.textContent = "REPORT OVERFLOW";
     }
   });
+
+      // Elements grab karein
+const modal = document.getElementById("reportModal");
+const reportBtn = document.querySelector(".report-btn");
+const closeBtn = document.querySelector(".close-btn");
+const overflowForm = document.getElementById("overflowForm");
+
+// Button click hone par modal khulega
+reportBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// 'X' click hone par modal band hoga
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Modal ke bahar kahin bhi click karne par modal band hoga
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Form submit ka response
+overflowForm.onsubmit = function(e) {
+    e.preventDefault();
+    alert("Emergency alert sent! Nearby workers are being notified.");
+    modal.style.display = "none";
+    overflowForm.reset();
+}
 </script>
 
 </body>
