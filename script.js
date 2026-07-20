@@ -5,7 +5,20 @@ const langSelect = document.getElementById('language-select');
 const mainHeading = document.querySelector('h2'); 
 const description = document.querySelector('p');  
 const actionBtn = document.querySelector('.report-btn'); 
+// Mobile Menu Toggle Logic
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navMenu = document.querySelector('.nav-menu');
 
+hamburgerBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked (Mobile view)
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
 // Language switch karne ka function
 langSelect.addEventListener('change', function() {
     if (this.value === 'hi') {
