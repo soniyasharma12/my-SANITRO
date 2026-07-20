@@ -9,40 +9,47 @@
 <body>
 
     <div class="container">
-        <h1 class="logo">SANITRO</h1>
-        
-        <h2 class="tagline">Smart Sanitation. Instant Relief</h2>
-        
-        <p class="description">
-            Connecting local residents with verified sanitation workers during monsoon emergencies. 
-            Report sewage overflows instantly and get hyper-local help without any delay.
-        </p>
-
-        <!-- Emergency Report Popup Form -->
-<div id="reportModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Report Sewage Emergency / सीवरेज आपातकालीन शिकायत</h2>
-        <form id="overflowForm">
-            <label>Your Name / आपका नाम:</label>
-            <input type="text" placeholder="Enter your name / अपना नाम दर्ज करें" required>
-
-            <label>Location / स्थान (पता):</label>
-            <input type="text" placeholder="Area, Street, Landmark / क्षेत्र, गली, लैंडमार्क" required>
-
-            <label>Severity Level / समस्या का स्तर:</label>
-            <select>
-                <option value="low">Low (Minor leakage) / कम (हल्का रिसाव)</option>
-                <option value="medium">Medium (Road blocked) / मध्यम (रास्ता बंद)</option>
-                <option value="high">Critical (Overflow entering homes) / गंभीर (घरों में पानी)</option>
+        <!-- Language Selector Dropdown -->
+        <div class="lang-container">
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिंदी (Hindi)</option>
             </select>
+        </div>
 
-            <button type="submit" class="submit-btn">Submit Emergency Report / शिकायत भेजें</button>
-        </form>
+        <h1>SANITRO</h1>
+        <h2>Smart Sanitation. Instant Relief.</h2>
+        <p>Connecting local residents with verified sanitation workers during monsoon emergencies. Report sewage overflows instantly and get hyper-local help without any delay.</p>
+
+        <!-- Main Action Button -->
+        <button class="report-btn">REPORT OVERFLOW</button>
     </div>
-</div>
 
-  
-<script src="script.js"></script>
+    <!-- Emergency Report Popup Form -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Report Sewage Emergency / सीवरेज आपातकालीन शिकायत</h2>
+            <form id="overflowForm">
+                <label>Your Name / आपका नाम:</label>
+                <input type="text" placeholder="Enter your name / अपना नाम दर्ज करें" required>
+
+                <label>Location / स्थान (पता):</label>
+                <input type="text" placeholder="Area, Street, Landmark / क्षेत्र, गली, लैंडमार्क" required>
+
+                <label>Severity Level / समस्या का स्तर:</label>
+                <select>
+                    <option value="low">Low (Minor leakage) / कम (हल्का रिसाव)</option>
+                    <option value="medium">Medium (Road blocked) / मध्यम (रास्ता बंद)</option>
+                    <option value="high">Critical (Overflow entering homes) / गंभीर (घरों में पानी)</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Submit Emergency Report / शिकायत भेजें</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
 </body>
 </html>
