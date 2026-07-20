@@ -1,4 +1,4 @@
-<style>
+
   /* Poore page ka font aur background thik karne ke liye */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -62,4 +62,88 @@
     background-color: #c0392b;
     transform: translateY(-2px);
   }
-</style>
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f0f4f8; /* Light clean gray-blue background */
+}
+
+/* Center Box (Card Layout) */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Brand Name / Logo */
+.logo {
+    color: #0d6efd; /* Modern Blue */
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* Tagline */
+.tagline {
+    color: #333333;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Description Text */
+.description {
+    color: #555555;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* Language Box & Label */
+.language-box {
+    margin-bottom: 20px;
+}
+
+.language-box label {
+    font-weight: 500;
+    color: #444444;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.language-box select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Red Action Button */
+.report-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+/* Hover Effect on Button */
+.report-btn:hover {
+    background-color: #bb2d3b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
+}
+
