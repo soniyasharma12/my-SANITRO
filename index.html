@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANITRO - Smart Sanitation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <h1>SANITRO</h1>
-  <P>
-    <H2>Smart Sanitation. Instant Relief</H2>
-    <H3>Connecting local residents with verified sanitation workers during monsoon emergencies. Report sewage overflows instantly and get hyper-local community help without any delay</H3>
-  </P>
-  <!-- Language Selection Dropdown -->
-<label for="language-select">Choose Language / भाषा चुनें:</label>
-<select id="language-select">
-  <option value="en">English</option>
-  <option value="hi">हिंदी (Hindi)</option>
-</select>
-<BR/>
-<BR/>
-<BUTTON>REPORT OVERFLOW</BUTTON>
+
+    <div class="container">
+        <h1 class="logo">SANITRO</h1>
+        
+        <h2 class="tagline">Smart Sanitation. Instant Relief</h2>
+        
+        <p class="description">
+            Connecting local residents with verified sanitation workers during monsoon emergencies. 
+            Report sewage overflows instantly and get hyper-local help without any delay.
+        </p>
+
+        <!-- Language Selection Dropdown -->
+        <div class="language-box">
+            <label for="language-select">Choose Language / भाषा चुनें:</label>
+            <select id="language-select">
+                <option value="en">English</option>
+                <option value="hi">हिंदी (Hindi)</option>
+            </select>
+        </div>
+
+        <br>
+
+        <button class="report-btn">REPORT OVERFLOW</button>
+    </div>
+
   <script>
   // Saare web page fragments ko JavaScript text links se jodne ke liye
   const langSelect = document.getElementById('language-select');
