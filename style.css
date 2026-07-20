@@ -333,3 +333,52 @@ body {
     .nav-menu.active { left: 0; }
     .track-box { flex-direction: column; }
 }
+/* --- WORKER REGISTRATION SECTION STYLES --- */
+.worker-card {
+    border-top: 5px solid #16a34a; /* Green accent bar for worker onboarding */
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.worker-form select {
+    width: 100%;
+    padding: 0.65rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+}
+
+.worker-submit-btn {
+    width: 100%;
+    background-color: #16a34a; /* Partner Green Color */
+    color: #ffffff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.worker-submit-btn:hover {
+    background-color: #15803d;
+    transform: translateY(-1px);
+}
+
+/* Mobile Responsiveness for Form Row */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
