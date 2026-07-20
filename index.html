@@ -21,6 +21,7 @@
                 <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
                 <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
                 <li class="nav-item"><a href="#track" class="nav-link">Track Status</a></li>
+                <li class="nav-item"><a href="#worker-join" class="nav-link">Join as Worker</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -82,6 +83,48 @@
             </div>
         </div>
     </section>
+    <!-- WORKER REGISTRATION SECTION -->
+<section class="section-container" id="worker-join">
+    <div class="section-card worker-card">
+        <div class="worker-header">
+            <h2 class="section-title">Join as Verified Worker / कार्यकर्ता बनें</h2>
+            <p class="section-subtitle">Earn extra income & help your community during emergencies. (अपनी सेवाएं दें और आय बढ़ाएं)</p>
+        </div>
+
+        <form class="worker-form" onsubmit="handleWorkerRegistration(event)">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name / पूरा नाम</label>
+                    <input type="text" placeholder="e.g. Ramesh Kumar" required>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number / मोबाइल नंबर</label>
+                    <input type="tel" placeholder="10-digit number" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Service Type / कार्य का प्रकार</label>
+                    <select required>
+                        <option value="">Select Specialization</option>
+                        <option value="drainage">Drainage & Sewage Cleaning</option>
+                        <option value="septic">Septic Tank Maintenance</option>
+                        <option value="plumbing">Emergency Pipe Repair / Plumbing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Service Area / कार्य क्षेत्र (Pincode/Locality)</label>
+                    <input type="text" placeholder="e.g. Sector 15 / 121007" required>
+                </div>
+            </div>
+
+            <button type="submit" class="worker-submit-btn">
+                👷 Register as Partner Worker
+            </button>
+        </form>
+    </div>
+</section>
 
     <!-- REPORT MODAL POPUP -->
     <div class="modal-overlay" id="reportModal">
