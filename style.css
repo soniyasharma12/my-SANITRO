@@ -493,3 +493,190 @@ body {
         padding: 0.5rem 0;
     }
 }
+/* Startup Tag in Navbar */
+.startup-tag {
+    font-size: 0.65rem;
+    background: #2563eb;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.admin-link {
+    color: #38bdf8 !important;
+    font-weight: 600;
+}
+
+.badge-pill {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.badge-pill.green {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Hero Button Group */
+.hero-btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background: #ffffff;
+    color: #0f172a;
+    border: 1.5px solid #cbd5e1;
+    padding: 0.9rem 1.8rem;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/* Metrics Bar */
+.metrics-bar {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 2.5rem 1rem;
+}
+
+.metrics-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.metric-item h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+.metric-item p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+/* Geo Input Group */
+.geo-input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.geo-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.file-input {
+    background: #f8fafc;
+    padding: 0.4rem;
+}
+
+/* Municipal Dashboard Styles */
+.admin-card {
+    border-top: 6px solid #2563eb;
+}
+
+.dashboard-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.dash-stat {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 1.2rem;
+    border-radius: 12px;
+}
+
+.dash-stat span {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.dash-stat h4 {
+    font-size: 1.3rem;
+    margin-top: 0.4rem;
+}
+
+.text-red { color: #ef4444; }
+.text-blue { color: #2563eb; }
+.text-orange { color: #f59e0b; }
+
+.dashboard-table-box {
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+
+.dash-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.dash-table th, .dash-table td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.dash-table th {
+    background: #f1f5f9;
+    font-weight: 700;
+}
+
+.sev-tag {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.sev-tag.high { background: #fee2e2; color: #991b1b; }
+.sev-tag.med { background: #fef3c7; color: #92400e; }
+
+.dispatch-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.view-btn {
+    background: #e2e8f0;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
