@@ -31,31 +31,29 @@
 
         <button class="report-btn">REPORT OVERFLOW</button>
         <!-- Emergency Report Popup Form -->
+<!-- Emergency Report Popup Form -->
 <div id="reportModal" class="modal">
     <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>Report Sewage Emergency</h2>
+        <h2>सीवरेज आपातकालीन शिकायत दर्ज करें</h2>
         <form id="overflowForm">
-            <label>Your Name / naam:</label>
-            <input type="text" placeholder="Enter your name" required>
+            <label>आपका नाम:</label>
+            <input type="text" placeholder="अपना नाम दर्ज करें" required>
 
-            <label>Location / Pata:</label>
+            <label>स्थान / पता:</label>
+            <input type="text" placeholder="क्षेत्र / गली / निकटतम लैंडमार्क" required>
 
-            <input type="text" placeholder="Area / Street / Landmark" required>
-
-            <label>Severity Level / Kitni dikkat h:</label>
-
+            <label>समस्या का स्तर:</label>
             <select>
-                <option value="low">Low (Minor leakage)</option>
-                <option value="medium">Medium (Road blocked)</option>
-                <option value="high">Critical (Overflow entering homes)</option>
+                <option value="low">कम (हल्का रिसाव)</option>
+                <option value="medium">मध्यम (रास्ता बंद)</option>
+                <option value="high">गंभीर (घरों में पानी घुस रहा है)</option>
             </select>
 
-            <button type="submit" class="submit-btn">Submit Emergency Report</button>
+            <button type="submit" class="submit-btn">आपातकालीन शिकायत भेजें</button>
         </form>
     </div>
 </div>
-    </div>
 
   
 <script src="script.js"></script>
