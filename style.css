@@ -1,378 +1,17 @@
-
-  /* Poore page ka font aur background thik karne ke liye */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f9fc; /* Light refreshing blue background */
-    color: #333333;
-    padding: 40px;
-    max-width: 800px;
-    margin: 0 auto; /* Center alignment */
-  }
-/* --- Navbar Base Styles --- */
-.navbar-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Logo Styling */
-.nav-logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #1e293b;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-}
-
-.logo-highlight {
-    color: #2563eb; /* Primary Blue color */
-}
-
-/* Nav Menu Links */
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 1.8rem;
+/* --- GLOBAL RESET --- */
+* {
     margin: 0;
     padding: 0;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #475569;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: #2563eb;
-}
-
-/* Action Controls */
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.lang-select {
-    padding: 0.4rem 0.6rem;
-    border-radius: 6px;
-    border: 1px solid #cbd5e1;
-    background-color: #f8fafc;
-    font-size: 0.85rem;
-    cursor: pointer;
-    outline: none;
-}
-
-.nav-btn-emergency {
-    background-color: #dc2626; /* Red Emergency Color */
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.nav-btn-emergency:hover {
-    background-color: #b91c1c;
-    transform: translateY(-1px);
-}
-
-/* Hamburger Icon for Mobile */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.bar {
-    width: 22px;
-    height: 3px;
-    background-color: #334155;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* --- Mobile Responsive Rules --- */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        flex-direction: column;
-        background-color: #ffffff;
-        width: 100%;
-        text-align: center;
-        padding: 1.5rem 0;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        transition: 0.3s ease-in-out;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-actions {
-        gap: 0.5rem;
-    }
-    
-    .nav-btn-emergency {
-        padding: 0.4rem 0.7rem;
-        font-size: 0.8rem;
-    }
-}
-  /* SANITRO Title */
-  h1 {
-    color: #0056b3; /* Professional Dark Blue */
-    font-size: 42px;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-  }
-
-  /* Subheading */
-  h2 {
-    color: #2c3e50;
-    font-size: 24px;
-    margin-top: 0;
-  }
-
-  /* Paragraph Text */
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555555;
-    margin-bottom: 30px;
-  }
-
-  /* Dropdown Select Box */
-  select {
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 1px solid #cccccc;
-    font-size: 14px;
-    margin-bottom: 40px;
-    display: block;
-  }
-
-  /* REPORT OVERFLOW Button */
-  button {
-    background-color: #e74c3c; /* Red Emergency Alert Color */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: 0.3s;
-  }
-
-  /* Button par mouse le jaane par change */
-  button:hover {
-    background-color: #c0392b;
-    transform: translateY(-2px);
-  }
-/* General Page Styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 40px 20px;
-    background-color: #f0f4f8; /* Light clean gray-blue background */
-}
-
-/* Center Box (Card Layout) */
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 35px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Brand Name / Logo */
-.logo {
-    color: #0d6efd; /* Modern Blue */
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-}
-
-/* Tagline */
-.tagline {
-    color: #333333;
-    font-size: 1.3rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-/* Description Text */
-.description {
-    color: #555555;
-    line-height: 1.6;
-    font-size: 1rem;
-    margin-bottom: 25px;
-}
-
-/* Language Box & Label */
-.language-box {
-    margin-bottom: 20px;
-}
-
-.language-box label {
-    font-weight: 500;
-    color: #444444;
-    display: block;
-    margin-bottom: 8px;
-}
-
-.language-box select {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid #cccccc;
-    font-size: 0.95rem;
-    outline: none;
-    cursor: pointer;
-}
-
-/* Red Action Button */
-.report-btn {
-    background-color: #dc3545;
-    color: white;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-}
-
-/* Hover Effect on Button */
-.report-btn:hover {
-    background-color: #bb2d3b;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3);
-}
-
-/* Modal (Background Overlay) */
-.modal {
-    display: none; /* Default me hidden rahega */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    backdrop-filter: blur(4px); /* Background blur effect */
-}
-
-/* Modal Content Box */
-.modal-content {
-    background-color: #ffffff;
-    margin: 8% auto;
-    padding: 25px 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 450px;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Close Button (X) */
-.close-btn {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #666;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #000;
-}
-
-/* Form Styling */
-.modal-content h2 {
-    margin-top: 0;
-    color: #dc3545;
-    font-size: 1.4rem;
-}
-
-.modal-content label {
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-.modal-content input, .modal-content select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
     box-sizing: border-box;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
 }
 
-.submit-btn {
-    width: 100%;
-    background-color: #198754; /* Green button for submit */
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 20px;
-    cursor: pointer;
+body {
+    background-color: #f1f5f9;
+    color: #334155;
 }
 
-.submit-btn:hover {
-    background-color: #157347;
-}
-/* --- FIXED NAVBAR CSS --- */
+/* --- NAVBAR STYLES --- */
 .navbar-header {
     position: sticky;
     top: 0;
@@ -387,39 +26,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    box-sizing: border-box; /* Prevent padding overflow */
 }
 
-/* Logo Fix */
 .nav-logo {
     font-size: 1.6rem;
     font-weight: 800;
     color: #1e293b;
     text-decoration: none;
-    white-space: nowrap; /* Logo tutne se rokega */
-    margin-right: 1.5rem;
 }
 
 .logo-highlight {
     color: #2563eb;
 }
 
-/* Nav Menu Fix (Flexible Spacing) */
 .nav-menu {
     display: flex;
-    align-items: center;
     list-style: none;
-    gap: 1.5rem; /* Links ke beech proper gap */
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap; /* Horizontal alignment maintain rakhega */
-}
-
-.nav-item {
-    white-space: nowrap; /* Text ko do lines me tootne se rokega */
+    gap: 1.8rem;
 }
 
 .nav-link {
@@ -427,19 +53,17 @@ body {
     color: #475569;
     font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
 }
 
 .nav-link:hover, .nav-link.active {
     color: #2563eb;
 }
 
-/* Actions Right Side Fix */
 .nav-actions {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-left: auto; /* Buttons ko bilkul right push karega */
 }
 
 .lang-select {
@@ -449,8 +73,6 @@ body {
     background-color: #f8fafc;
     font-size: 0.85rem;
     cursor: pointer;
-    outline: none;
-    height: 36px;
 }
 
 .nav-btn-emergency {
@@ -462,9 +84,163 @@ body {
     font-weight: 600;
     font-size: 0.85rem;
     cursor: pointer;
-    white-space: nowrap;
-    height: 36px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 22px;
+    height: 3px;
+    background-color: #334155;
+    border-radius: 2px;
+}
+
+/* --- HERO SECTION STYLES --- */
+.hero-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.3rem;
+    min-height: calc(100vh - 70px);
+    padding: 2rem 1rem;
+}
+
+.hero-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2563eb;
+    letter-spacing: -1px;
+    margin-bottom: 0.2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 1.2rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+}
+
+/* --- MODAL POPUP STYLES --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE MOBILE VIEW --- */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease;
+    }
+
+    .nav-menu.active { left: 0; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.2rem; }
 }
